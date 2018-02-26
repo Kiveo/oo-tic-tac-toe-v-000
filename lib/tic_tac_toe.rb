@@ -12,6 +12,13 @@ class TicTacToe
     [0,4,8], #7
     [2,4,6] #8 possible win scenarios
   ]
+  def display_board(board)
+    puts " #{board[0]} | #{board[1]} | #{board[2]} "
+    puts "-----------"
+    puts " #{board[3]} | #{board[4]} | #{board[5]} "
+    puts "-----------"
+    puts " #{board[6]} | #{board[7]} | #{board[8]} "
+  end
 ######################################################
   def position_taken?(board, index)
     !(board[index].nil? || board[index] == " ")
@@ -36,13 +43,6 @@ class TicTacToe
     player
   end
 
-  def display_board(board)
-    puts " #{board[0]} | #{board[1]} | #{board[2]} "
-    puts "-----------"
-    puts " #{board[3]} | #{board[4]} | #{board[5]} "
-    puts "-----------"
-    puts " #{board[6]} | #{board[7]} | #{board[8]} "
-  end
 
   def input_to_index(user_input)
     user_input.to_i - 1
